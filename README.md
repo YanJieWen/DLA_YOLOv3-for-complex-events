@@ -60,7 +60,7 @@ model_body = yolo_body(image_input, num_anchors//3, num_classes,'orginal_yolo')
 
 After a long and hard training, you will get a good pedestrian detection model, stored in file logs/000/, and you need to copy it to the file [model_data](model_data).
 
-We wrote a test file [test.py](test.py), which matches the grount truth through IOU and confidence. It will generate a table file under the project folder.Your weight file (`line 23 `) should correspond to the model structure file (`line 46`). At last, We run the [cal_ap.py](cal_ap.py), it will generate a complete AP record excel file and output the value of AP.
+We wrote a test file [yolo3/test.py](test.py), which matches the grount truth through IOU and confidence. It will generate a table file under the project folder.Your weight file (`line 23 `) should correspond to the model structure file (`line 46`). At last, We run the [yolo3/cal_ap.py](cal_ap.py), it will generate a complete AP record excel file and output the value of AP.
 
 
 ## Maintainers
