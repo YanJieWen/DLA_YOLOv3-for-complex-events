@@ -41,7 +41,7 @@ Three weight: `dark_weight.h5`(original YOLOv3),`dla_weight.h5`(a novel model),`
 ## Demo
 
 To start a demo for pedestrian detection!
-
+Corresponding the weight file in [yolo.py](yolo.py) to the model(line 30&line 80 ) `dla_weight.h5`-`dla_model` & `original_yolo`-`dark_weight.h5`
 ```
 pyhon yolo_video.py --image
 ```
