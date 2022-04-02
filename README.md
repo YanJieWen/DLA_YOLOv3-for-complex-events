@@ -49,6 +49,12 @@ pyhon yolo_video.py --image
 
 
 ## Training
+The backbone DLA
+![image](picture/fig7_.png)
+
+Complete detection framework
+![image](picture/fig8.png)
+
 
 If you want to training your own model, you need to change the [train,py](train.py), the line 34,35(classes), line 119(which model to use,we apply two,one is original YOLOv3 and DLA). if you want to use original YOLOv3, you can change the line  as :
 ```
