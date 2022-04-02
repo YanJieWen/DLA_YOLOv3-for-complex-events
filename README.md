@@ -9,9 +9,8 @@ A novel pedestrian detection framework under complex events
 	- [Dataset](#dataset)
 	- [Weight](#weight)
 - [Demo](#demo)
-- [Training](#train)
-- [Testing](#test)
-- [Maintainers](#maintainers)
+- [Training](#training)
+- [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -63,22 +62,21 @@ After a long and hard training, you will get a good pedestrian detection model, 
 We wrote a test file [test.py](yolo3/test.py), which matches the grount truth through IOU and confidence. It will generate a table file under the project folder.Your weight file (`line 23 `) should correspond to the model structure file (`line 46`). At last, We run the [cal_ap.py](yolo3/cal_ap.py), it will generate a complete AP record excel file and output the value of AP.
 
 
-## Maintainers
-
-[@RichardLitt](https://github.com/RichardLitt).
-
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/RichardLitt/standard-readme/issues/new) or submit PRs.
+Most of the code comes from [qqwweee/keras-yolo3](https://github.com/qqwweee/keras-yolo3)
 
-Standard Readme follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
+The image annotation tool we use is [labelImg](https://github.com/tzutalin/labelImg)
 
-### Contributors
+The inspiration of this article comes from this [paper](https://arxiv.org/abs/1707.06484)
 
-This project exists thanks to all the people who contribute. 
-<a href="https://github.com/RichardLitt/standard-readme/graphs/contributors"><img src="https://opencollective.com/standard-readme/contributors.svg?width=890&button=false" /></a>
+At the same time, we are also very grateful to [Lin et al](https://arxiv.org/abs/2005.04490). For collecting pedestrian data of complex events
 
+At last, thank you very much for the contribution of the co-author in the article, and also thank my girlfriend for giving me the courage to pursue for a Ph.d.
+
+
+![image](picture/FIG3.png)
 
 ## License
 
-[MIT](LICENSE) © Richard Littauer
+[MIT](LICENSE) © YanjieWen
