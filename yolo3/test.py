@@ -20,7 +20,7 @@ from tensorflow.keras.layers import Input
 from yolo3.utils import *
 import numpy as np
 import pandas as pd
-model_path = '../model_data/ep240-loss16.916-val_loss18.087.h5'
+model_path = '../model_data/dla_weight.h5'
 anchors_path = '../model_data/yolo_anchors.txt'
 classes_path = '../model_data/voc_classes.txt'
 classes_path_voc = '../model_data/voc_classes.txt'
