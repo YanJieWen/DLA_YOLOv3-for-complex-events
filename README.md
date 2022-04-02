@@ -67,6 +67,12 @@ After a long and hard training, you will get a good pedestrian detection model, 
 
 We wrote a test file [test.py](yolo3/test.py), which matches the grount truth through IOU and confidence. It will generate a table file under the project folder.Your weight file (`line 23 `) should correspond to the model structure file (`line 46`). At last, We run the [cal_ap.py](yolo3/cal_ap.py), it will generate a complete AP record excel file and output the value of AP.
 
+TP | FP | Confi | iou
+----|----|----|----
+0 |	1| 0.3176| 0.2955
+0 |	1| 0.4064| 0.3597
+1 |	0| 0.4765| 0.8158
+
 
 ## Contributing
 
