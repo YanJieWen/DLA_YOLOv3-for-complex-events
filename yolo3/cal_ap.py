@@ -40,26 +40,21 @@ class Cal_average_precision():
         self.df['precision'] = self.df['acc_tp'] / np.arange(1, len(self.df['acc_tp']) + 1)
         self.df['recall'] = self.df['acc_tp'] / self.num_ground_truth
         self.df.to_csv(self.output_path)
-    def cal_ap(self):
-        re_set = list(set(self.df['recall']))
-        re_set.insert(0, 0)
-        re_set.extend([1])
-        re_set.sort()
-        max_presicion = []
+    def cal_ap(self):#11points
+        re_set = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
         recall_ = self.df['recall'].values.tolist()
         precision_ = self.df['precision'].values.tolist()
-        for value in re_set:
-            try:
-                pr_index = np.array([i for i in range(len(recall_)) if recall_[i] >= value])
+        max_presicion = []
+        for re_ in re_set:
+            pr_index = []
+            for index,re in enumerate(recall_):
+                if re>=re_:
+                    pr_index.append(index)
+            if len(pr_index)!=0:
                 max_presicion.append(np.max([precision_[i] for i in pr_index]))
-            except:  # 最后大于等于1找不到所以最后延申一个1
-                max_presicion.extend([0])
-        # 计算面积
-        area = 0
-        for index, value in enumerate(re_set):
-            if index <= len(re_set) - 2:
-                area += (re_set[index + 1] - value) * max_presicion[index]
-        print('检测精度ap值为{}'.format(area))
+            else:
+                max_presicion.append(0)
+        print(np.average(max_presicion))
 
 
 def main():
